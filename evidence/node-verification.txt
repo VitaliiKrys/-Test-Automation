@@ -1,0 +1,131 @@
+
+> qa-automation-lab1-variant9@1.0.0 verify:offline
+> node --experimental-strip-types --experimental-test-coverage --test tools/verify-with-node.test.mjs
+
+TAP version 13
+# (node:770) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: palindrome: palindrome word
+ok 1 - palindrome: palindrome word
+  ---
+  duration_ms: 1.16862
+  type: 'test'
+  ...
+# Subtest: palindrome: phrase with spaces
+ok 2 - palindrome: phrase with spaces
+  ---
+  duration_ms: 0.141464
+  type: 'test'
+  ...
+# Subtest: palindrome: Ukrainian case normalization
+ok 3 - palindrome: Ukrainian case normalization
+  ---
+  duration_ms: 0.07233
+  type: 'test'
+  ...
+# Subtest: palindrome: tabs and line breaks
+ok 4 - palindrome: tabs and line breaks
+  ---
+  duration_ms: 0.064127
+  type: 'test'
+  ...
+# Subtest: palindrome: non-palindrome word
+ok 5 - palindrome: non-palindrome word
+  ---
+  duration_ms: 0.974216
+  type: 'test'
+  ...
+# Subtest: palindrome: non-palindrome phrase
+ok 6 - palindrome: non-palindrome phrase
+  ---
+  duration_ms: 0.078448
+  type: 'test'
+  ...
+# Subtest: palindrome: one character
+ok 7 - palindrome: one character
+  ---
+  duration_ms: 0.054503
+  type: 'test'
+  ...
+# Subtest: palindrome: numeric string
+ok 8 - palindrome: numeric string
+  ---
+  duration_ms: 0.081203
+  type: 'test'
+  ...
+# Subtest: palindrome: punctuation preserved
+ok 9 - palindrome: punctuation preserved
+  ---
+  duration_ms: 0.055685
+  type: 'test'
+  ...
+# Subtest: palindrome: unicode code points
+ok 10 - palindrome: unicode code points
+  ---
+  duration_ms: 0.048554
+  type: 'test'
+  ...
+# Subtest: palindrome rejects: empty string
+ok 11 - palindrome rejects: empty string
+  ---
+  duration_ms: 0.395379
+  type: 'test'
+  ...
+# Subtest: palindrome rejects: spaces only
+ok 12 - palindrome rejects: spaces only
+  ---
+  duration_ms: 0.064508
+  type: 'test'
+  ...
+# Subtest: palindrome rejects: whitespace only
+ok 13 - palindrome rejects: whitespace only
+  ---
+  duration_ms: 0.051569
+  type: 'test'
+  ...
+# Subtest: temperature: 0 C -> 32 F
+ok 14 - temperature: 0 C -> 32 F
+  ---
+  duration_ms: 0.088935
+  type: 'test'
+  ...
+# Subtest: temperature: 100 C -> 212 F
+ok 15 - temperature: 100 C -> 212 F
+  ---
+  duration_ms: 0.058389
+  type: 'test'
+  ...
+# Subtest: temperature: -40 C -> -40 F
+ok 16 - temperature: -40 C -> -40 F
+  ---
+  duration_ms: 0.049956
+  type: 'test'
+  ...
+# Subtest: temperature rejects NaN
+ok 17 - temperature rejects NaN
+  ---
+  duration_ms: 0.070256
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 137.390567
+# start of coverage report
+# ---------------------------------------------------------------------------
+# file                       | line % | branch % | funcs % | uncovered lines
+# ---------------------------------------------------------------------------
+# src                        |        |          |         | 
+#  palindrome.ts             | 100.00 |   100.00 |  100.00 | 
+#  temperature.ts            | 100.00 |   100.00 |  100.00 | 
+# tools                      |        |          |         | 
+#  verify-with-node.test.mjs | 100.00 |   100.00 |  100.00 | 
+# ---------------------------------------------------------------------------
+# all files                  | 100.00 |   100.00 |  100.00 | 
+# ---------------------------------------------------------------------------
+# end of coverage report
