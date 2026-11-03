@@ -9,4 +9,8 @@ describe('Варіант 9: розрахунок оренди', () => {
   it.each([{ days: 1, expected: 800 }, { days: 2, expected: 1600 }, { days: 6, expected: 4800 }])('базова оренда $days діб → $expected грн', ({ days, expected }) => {
     expect(calculateRentalCharge(days)).toBe(expected);
   });
+
+  it.each([{ days: 7, expected: 5040 }, { days: 8, expected: 5760 }, { days: 29, expected: 20880 }])('знижка 10%: $days діб → $expected грн', ({ days, expected }) => {
+    expect(calculateRentalCharge(days)).toBe(expected);
+  });
 });

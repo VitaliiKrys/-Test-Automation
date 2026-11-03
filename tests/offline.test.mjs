@@ -12,3 +12,8 @@ for (const [days, expected] of [[1, 800], [2, 1600], [6, 4800]]) {
     assert.equal(calculateRentalCharge(days), expected);
   });
 }
+for (const [days, expected] of [[7, 5040], [8, 5760], [29, 20880]]) {
+  test(`Знижка 10%: ${days} діб → ${expected} грн`, () => {
+    assert.equal(calculateRentalCharge(days), expected);
+  });
+}
