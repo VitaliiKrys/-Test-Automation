@@ -25,6 +25,8 @@ export function calculateRentalCharge(days: number): number {
   return base * (1 - getDiscountRate(days));
 }
 
+const REFUNDABLE_DEPOSIT = 2000;
+
 export function calculateUpfrontPayment(days: number): number {
-  return calculateRentalCharge(days) + 2000;
+  return calculateRentalCharge(days) + REFUNDABLE_DEPOSIT;
 }
