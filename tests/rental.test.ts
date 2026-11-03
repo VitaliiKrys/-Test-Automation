@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { calculateRentalCharge, calculateUpfrontPayment } from '../src/rental';
+import { calculateRentalCharge, calculateUpfrontPayment, calculateRentalSummary } from '../src/rental';
 
 describe('Варіант 9: розрахунок оренди', () => {
   it.each([0, -1, -15, 1.5, NaN, Infinity, -Infinity])('відхиляє %s діб', (days) => {
@@ -20,5 +20,23 @@ describe('Варіант 9: розрахунок оренди', () => {
 
   it.each([{ days: 1, expected: 2800 }, { days: 7, expected: 7040 }, { days: 30, expected: 20000 }])('платіж із заставою: $days діб → $expected грн', ({ days, expected }) => {
     expect(calculateUpfrontPayment(days)).toBe(expected);
+  });
+
+  it.each([
+    { days: 1, returned: false, charge: 800, upfront: 2800, refund: 0, final: 2800 },
+    { days: 1, returned: true, charge: 800, upfront: 2800, refund: 2000, final: 800 },
+    { days: 7, returned: true, charge: 5040, upfront: 7040, refund: 2000, final: 5040 },
+    { days: 30, returned: true, charge: 18000, upfront: 20000, refund: 2000, final: 18000 },
+  ])('повернення застави: $days діб, returned=$returned', ({ days, returned, charge, upfront, refund, final }) => {
+    const result = calculateRentalSummary(days, { returned });
+    expect(result.rentalCharge).toBe(charge);
+    expect(result.upfrontPayment).toBe(upfront);
+    expect(result.deposit).toBe(2000);
+    expect(result.refundedDeposit).toBe(refund);
+    expect(result.paymentAfterRefund).toBe(final);
+  });
+  it('за замовчуванням застава не повернута; недійсні дні відхиляються', () => {
+    expect(calculateRentalSummary(6).refundedDeposit).toBe(0);
+    expect(() => calculateRentalSummary(0, { returned: true })).toThrow('INVALID_DAYS');
   });
 });
