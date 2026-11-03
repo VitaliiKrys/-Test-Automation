@@ -1,0 +1,20 @@
+{
+  "name": "tdd-lab-3-variant-9-rental",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "test:offline": "node --disable-warning=ExperimentalWarning --experimental-strip-types --test tests/offline.test.mjs",
+    "test:coverage:offline": "node --disable-warning=ExperimentalWarning --experimental-strip-types --experimental-test-coverage --test --test-coverage-include=src/rental.ts --test-coverage-branches=90 tests/offline.test.mjs",
+    "typecheck:offline": "tsc -p tsconfig.offline.json"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
