@@ -9,6 +9,7 @@ function assertValidDays(days: number): void {
 }
 
 function getDiscountRate(days: number): number {
+  if (days >= 30) return 0.25;
   return days >= 7 ? 0.10 : 0;
 }
 
