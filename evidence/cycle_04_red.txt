@@ -1,0 +1,146 @@
+TAP version 13
+# Subtest: Некоректні дні 0 → INVALID_DAYS
+ok 1 - Некоректні дні 0 → INVALID_DAYS
+  ---
+  duration_ms: 1.352087
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -1 → INVALID_DAYS
+ok 2 - Некоректні дні -1 → INVALID_DAYS
+  ---
+  duration_ms: 0.158375
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -15 → INVALID_DAYS
+ok 3 - Некоректні дні -15 → INVALID_DAYS
+  ---
+  duration_ms: 0.089543
+  type: 'test'
+  ...
+# Subtest: Некоректні дні 1.5 → INVALID_DAYS
+ok 4 - Некоректні дні 1.5 → INVALID_DAYS
+  ---
+  duration_ms: 0.071305
+  type: 'test'
+  ...
+# Subtest: Некоректні дні NaN → INVALID_DAYS
+ok 5 - Некоректні дні NaN → INVALID_DAYS
+  ---
+  duration_ms: 0.070295
+  type: 'test'
+  ...
+# Subtest: Некоректні дні Infinity → INVALID_DAYS
+ok 6 - Некоректні дні Infinity → INVALID_DAYS
+  ---
+  duration_ms: 0.07405
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -Infinity → INVALID_DAYS
+ok 7 - Некоректні дні -Infinity → INVALID_DAYS
+  ---
+  duration_ms: 0.129161
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 1 діб → 800 грн
+ok 8 - Базова оренда: 1 діб → 800 грн
+  ---
+  duration_ms: 0.127659
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 2 діб → 1600 грн
+ok 9 - Базова оренда: 2 діб → 1600 грн
+  ---
+  duration_ms: 0.203261
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 6 діб → 4800 грн
+ok 10 - Базова оренда: 6 діб → 4800 грн
+  ---
+  duration_ms: 0.353765
+  type: 'test'
+  ...
+# Subtest: Знижка 10%: 7 діб → 5040 грн
+ok 11 - Знижка 10%: 7 діб → 5040 грн
+  ---
+  duration_ms: 0.390209
+  type: 'test'
+  ...
+# Subtest: Знижка 10%: 8 діб → 5760 грн
+ok 12 - Знижка 10%: 8 діб → 5760 грн
+  ---
+  duration_ms: 0.058858
+  type: 'test'
+  ...
+# Subtest: Знижка 10%: 29 діб → 20880 грн
+ok 13 - Знижка 10%: 29 діб → 20880 грн
+  ---
+  duration_ms: 0.041201
+  type: 'test'
+  ...
+# Subtest: Знижка 25%: 29 діб → 20880 грн
+ok 14 - Знижка 25%: 29 діб → 20880 грн
+  ---
+  duration_ms: 0.059148
+  type: 'test'
+  ...
+# Subtest: Знижка 25%: 30 діб → 18000 грн
+not ok 15 - Знижка 25%: 30 діб → 18000 грн
+  ---
+  duration_ms: 1.097859
+  type: 'test'
+  location: '/mnt/data/tdd_lab3_variant9/tests/offline.test.mjs:21:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    21600 !== 18000
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 18000
+  actual: 21600
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/tdd_lab3_variant9/tests/offline.test.mjs:22:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: Знижка 25%: 31 діб → 18600 грн
+not ok 16 - Знижка 25%: 31 діб → 18600 грн
+  ---
+  duration_ms: 0.139356
+  type: 'test'
+  location: '/mnt/data/tdd_lab3_variant9/tests/offline.test.mjs:21:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    22320 !== 18600
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 18600
+  actual: 22320
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/tdd_lab3_variant9/tests/offline.test.mjs:22:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 14
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 141.089859

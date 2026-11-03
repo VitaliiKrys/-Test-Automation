@@ -35,8 +35,10 @@ describe('Варіант 9: розрахунок оренди', () => {
     expect(result.refundedDeposit).toBe(refund);
     expect(result.paymentAfterRefund).toBe(final);
   });
-  it('за замовчуванням застава не повернута; недійсні дні відхиляються', () => {
+  it('за замовчуванням заставу ще не повернуто', () => {
     expect(calculateRentalSummary(6).refundedDeposit).toBe(0);
+  });
+  it('відхиляє недійсну тривалість у підсумковому розрахунку', () => {
     expect(() => calculateRentalSummary(0, { returned: true })).toThrow('INVALID_DAYS');
   });
 });

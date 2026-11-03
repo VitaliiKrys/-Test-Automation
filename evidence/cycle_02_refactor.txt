@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: Некоректні дні 0 → INVALID_DAYS
+ok 1 - Некоректні дні 0 → INVALID_DAYS
+  ---
+  duration_ms: 1.817346
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -1 → INVALID_DAYS
+ok 2 - Некоректні дні -1 → INVALID_DAYS
+  ---
+  duration_ms: 0.271653
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -15 → INVALID_DAYS
+ok 3 - Некоректні дні -15 → INVALID_DAYS
+  ---
+  duration_ms: 0.25652
+  type: 'test'
+  ...
+# Subtest: Некоректні дні 1.5 → INVALID_DAYS
+ok 4 - Некоректні дні 1.5 → INVALID_DAYS
+  ---
+  duration_ms: 0.133628
+  type: 'test'
+  ...
+# Subtest: Некоректні дні NaN → INVALID_DAYS
+ok 5 - Некоректні дні NaN → INVALID_DAYS
+  ---
+  duration_ms: 0.131255
+  type: 'test'
+  ...
+# Subtest: Некоректні дні Infinity → INVALID_DAYS
+ok 6 - Некоректні дні Infinity → INVALID_DAYS
+  ---
+  duration_ms: 0.28304
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -Infinity → INVALID_DAYS
+ok 7 - Некоректні дні -Infinity → INVALID_DAYS
+  ---
+  duration_ms: 0.211584
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 1 діб → 800 грн
+ok 8 - Базова оренда: 1 діб → 800 грн
+  ---
+  duration_ms: 0.190583
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 2 діб → 1600 грн
+ok 9 - Базова оренда: 2 діб → 1600 грн
+  ---
+  duration_ms: 1.231177
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 6 діб → 4800 грн
+ok 10 - Базова оренда: 6 діб → 4800 грн
+  ---
+  duration_ms: 0.524638
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 189.196834

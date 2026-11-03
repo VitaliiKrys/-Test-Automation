@@ -1,0 +1,2 @@
+tsc -p tsconfig.offline.json
+exit code: 0

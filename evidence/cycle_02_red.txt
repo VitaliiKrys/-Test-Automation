@@ -1,0 +1,112 @@
+TAP version 13
+# Subtest: Некоректні дні 0 → INVALID_DAYS
+ok 1 - Некоректні дні 0 → INVALID_DAYS
+  ---
+  duration_ms: 1.766892
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -1 → INVALID_DAYS
+ok 2 - Некоректні дні -1 → INVALID_DAYS
+  ---
+  duration_ms: 0.238654
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -15 → INVALID_DAYS
+ok 3 - Некоректні дні -15 → INVALID_DAYS
+  ---
+  duration_ms: 0.132326
+  type: 'test'
+  ...
+# Subtest: Некоректні дні 1.5 → INVALID_DAYS
+ok 4 - Некоректні дні 1.5 → INVALID_DAYS
+  ---
+  duration_ms: 0.25584
+  type: 'test'
+  ...
+# Subtest: Некоректні дні NaN → INVALID_DAYS
+ok 5 - Некоректні дні NaN → INVALID_DAYS
+  ---
+  duration_ms: 0.154429
+  type: 'test'
+  ...
+# Subtest: Некоректні дні Infinity → INVALID_DAYS
+ok 6 - Некоректні дні Infinity → INVALID_DAYS
+  ---
+  duration_ms: 0.126387
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -Infinity → INVALID_DAYS
+ok 7 - Некоректні дні -Infinity → INVALID_DAYS
+  ---
+  duration_ms: 0.117724
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 1 діб → 800 грн
+not ok 8 - Базова оренда: 1 діб → 800 грн
+  ---
+  duration_ms: 0.271243
+  type: 'test'
+  location: '/mnt/data/tdd_lab3_variant9/tests/offline.test.mjs:11:3'
+  failureType: 'testCodeFailure'
+  error: 'INVALID_DAYS'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    rejectInvalidDays (file:///mnt/data/tdd_lab3_variant9/src/rental.ts:2:9)
+    calculateRentalCharge (file:///mnt/data/tdd_lab3_variant9/src/rental.ts:6:10)
+    TestContext.<anonymous> (file:///mnt/data/tdd_lab3_variant9/tests/offline.test.mjs:12:18)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: Базова оренда: 2 діб → 1600 грн
+not ok 9 - Базова оренда: 2 діб → 1600 грн
+  ---
+  duration_ms: 0.318132
+  type: 'test'
+  location: '/mnt/data/tdd_lab3_variant9/tests/offline.test.mjs:11:3'
+  failureType: 'testCodeFailure'
+  error: 'INVALID_DAYS'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    rejectInvalidDays (file:///mnt/data/tdd_lab3_variant9/src/rental.ts:2:9)
+    calculateRentalCharge (file:///mnt/data/tdd_lab3_variant9/src/rental.ts:6:10)
+    TestContext.<anonymous> (file:///mnt/data/tdd_lab3_variant9/tests/offline.test.mjs:12:18)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: Базова оренда: 6 діб → 4800 грн
+not ok 10 - Базова оренда: 6 діб → 4800 грн
+  ---
+  duration_ms: 0.429438
+  type: 'test'
+  location: '/mnt/data/tdd_lab3_variant9/tests/offline.test.mjs:11:3'
+  failureType: 'testCodeFailure'
+  error: 'INVALID_DAYS'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    rejectInvalidDays (file:///mnt/data/tdd_lab3_variant9/src/rental.ts:2:9)
+    calculateRentalCharge (file:///mnt/data/tdd_lab3_variant9/src/rental.ts:6:10)
+    TestContext.<anonymous> (file:///mnt/data/tdd_lab3_variant9/tests/offline.test.mjs:12:18)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 7
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 240.780745

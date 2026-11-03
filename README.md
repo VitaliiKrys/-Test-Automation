@@ -12,7 +12,7 @@
 
 ## Запуск
 ```sh
-npm ci
+npm install
 npm test
 npm run test:coverage
 npm run typecheck
@@ -24,3 +24,17 @@ npm run typecheck
 - `calculateRentalSummary(days, { returned?: boolean })` — деталізація платежу, повернення застави й кінцевих витрат.
 
 Коміти `red:`, `green:`, `refactor:` створено в послідовності TDD. Перевірте `git log --oneline --reverse`.
+
+## Перевірка без встановлення пакетів
+Якщо немає доступу до npm-реєстру, у Node.js 22.16+ можна виконати дублюючий набір тестів на вбудованому `node:test`:
+```sh
+npm run test:offline
+npm run test:coverage:offline
+```
+`tests/offline.test.mjs` перевіряє ті самі сценарії, що й `tests/rental.test.ts` (Vitest).
+В `evidence/` наведені фактичні запуски Red/Green/Refactor для кожного циклу та звіт V8.
+Повний запуск Vitest потребує попереднього `npm install` з доступом до реєстру.
+
+## Git-історія
+Збережено справжню папку `.git` із 19 кроками (1 підготовчий + 6×3 TDD).
+Віддалений GitHub-репозиторій не створювався; перед здачею його можна опублікувати власним обліковим записом.

@@ -1,0 +1,160 @@
+TAP version 13
+# Subtest: Некоректні дні 0 → INVALID_DAYS
+ok 1 - Некоректні дні 0 → INVALID_DAYS
+  ---
+  duration_ms: 2.949497
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -1 → INVALID_DAYS
+ok 2 - Некоректні дні -1 → INVALID_DAYS
+  ---
+  duration_ms: 0.23578
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -15 → INVALID_DAYS
+ok 3 - Некоректні дні -15 → INVALID_DAYS
+  ---
+  duration_ms: 0.133288
+  type: 'test'
+  ...
+# Subtest: Некоректні дні 1.5 → INVALID_DAYS
+ok 4 - Некоректні дні 1.5 → INVALID_DAYS
+  ---
+  duration_ms: 0.145606
+  type: 'test'
+  ...
+# Subtest: Некоректні дні NaN → INVALID_DAYS
+ok 5 - Некоректні дні NaN → INVALID_DAYS
+  ---
+  duration_ms: 0.155742
+  type: 'test'
+  ...
+# Subtest: Некоректні дні Infinity → INVALID_DAYS
+ok 6 - Некоректні дні Infinity → INVALID_DAYS
+  ---
+  duration_ms: 0.25568
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -Infinity → INVALID_DAYS
+ok 7 - Некоректні дні -Infinity → INVALID_DAYS
+  ---
+  duration_ms: 0.130264
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 1 діб → 800 грн
+ok 8 - Базова оренда: 1 діб → 800 грн
+  ---
+  duration_ms: 0.177082
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 2 діб → 1600 грн
+ok 9 - Базова оренда: 2 діб → 1600 грн
+  ---
+  duration_ms: 1.979418
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 6 діб → 4800 грн
+ok 10 - Базова оренда: 6 діб → 4800 грн
+  ---
+  duration_ms: 1.093183
+  type: 'test'
+  ...
+# Subtest: Знижка 10%: 7 діб → 5040 грн
+ok 11 - Знижка 10%: 7 діб → 5040 грн
+  ---
+  duration_ms: 0.411682
+  type: 'test'
+  ...
+# Subtest: Знижка 10%: 8 діб → 5760 грн
+ok 12 - Знижка 10%: 8 діб → 5760 грн
+  ---
+  duration_ms: 0.057715
+  type: 'test'
+  ...
+# Subtest: Знижка 10%: 29 діб → 20880 грн
+ok 13 - Знижка 10%: 29 діб → 20880 грн
+  ---
+  duration_ms: 0.044606
+  type: 'test'
+  ...
+# Subtest: Знижка 25%: 29 діб → 20880 грн
+ok 14 - Знижка 25%: 29 діб → 20880 грн
+  ---
+  duration_ms: 0.121851
+  type: 'test'
+  ...
+# Subtest: Знижка 25%: 30 діб → 18000 грн
+ok 15 - Знижка 25%: 30 діб → 18000 грн
+  ---
+  duration_ms: 0.037425
+  type: 'test'
+  ...
+# Subtest: Знижка 25%: 31 діб → 18600 грн
+ok 16 - Знижка 25%: 31 діб → 18600 грн
+  ---
+  duration_ms: 0.032008
+  type: 'test'
+  ...
+# Subtest: Попередня оплата: 1 діб → 2800 грн
+ok 17 - Попередня оплата: 1 діб → 2800 грн
+  ---
+  duration_ms: 0.062533
+  type: 'test'
+  ...
+# Subtest: Попередня оплата: 7 діб → 7040 грн
+ok 18 - Попередня оплата: 7 діб → 7040 грн
+  ---
+  duration_ms: 0.031697
+  type: 'test'
+  ...
+# Subtest: Попередня оплата: 30 діб → 20000 грн
+ok 19 - Попередня оплата: 30 діб → 20000 грн
+  ---
+  duration_ms: 0.028062
+  type: 'test'
+  ...
+# Subtest: Повернення: 1 діб, returned=false
+ok 20 - Повернення: 1 діб, returned=false
+  ---
+  duration_ms: 0.149451
+  type: 'test'
+  ...
+# Subtest: Повернення: 1 діб, returned=true
+ok 21 - Повернення: 1 діб, returned=true
+  ---
+  duration_ms: 0.089653
+  type: 'test'
+  ...
+# Subtest: Повернення: 7 діб, returned=true
+ok 22 - Повернення: 7 діб, returned=true
+  ---
+  duration_ms: 0.053539
+  type: 'test'
+  ...
+# Subtest: Повернення: 30 діб, returned=true
+ok 23 - Повернення: 30 діб, returned=true
+  ---
+  duration_ms: 0.034832
+  type: 'test'
+  ...
+# Subtest: За замовчуванням заставу не повернуто
+ok 24 - За замовчуванням заставу не повернуто
+  ---
+  duration_ms: 0.18225
+  type: 'test'
+  ...
+# Subtest: Не можна сформувати підсумок на 0 діб
+ok 25 - Не можна сформувати підсумок на 0 діб
+  ---
+  duration_ms: 0.268449
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 166.406559

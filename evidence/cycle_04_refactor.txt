@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: Некоректні дні 0 → INVALID_DAYS
+ok 1 - Некоректні дні 0 → INVALID_DAYS
+  ---
+  duration_ms: 1.608787
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -1 → INVALID_DAYS
+ok 2 - Некоректні дні -1 → INVALID_DAYS
+  ---
+  duration_ms: 0.099248
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -15 → INVALID_DAYS
+ok 3 - Некоректні дні -15 → INVALID_DAYS
+  ---
+  duration_ms: 0.071727
+  type: 'test'
+  ...
+# Subtest: Некоректні дні 1.5 → INVALID_DAYS
+ok 4 - Некоректні дні 1.5 → INVALID_DAYS
+  ---
+  duration_ms: 0.104425
+  type: 'test'
+  ...
+# Subtest: Некоректні дні NaN → INVALID_DAYS
+ok 5 - Некоректні дні NaN → INVALID_DAYS
+  ---
+  duration_ms: 0.073078
+  type: 'test'
+  ...
+# Subtest: Некоректні дні Infinity → INVALID_DAYS
+ok 6 - Некоректні дні Infinity → INVALID_DAYS
+  ---
+  duration_ms: 0.097936
+  type: 'test'
+  ...
+# Subtest: Некоректні дні -Infinity → INVALID_DAYS
+ok 7 - Некоректні дні -Infinity → INVALID_DAYS
+  ---
+  duration_ms: 0.065547
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 1 діб → 800 грн
+ok 8 - Базова оренда: 1 діб → 800 грн
+  ---
+  duration_ms: 0.119718
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 2 діб → 1600 грн
+ok 9 - Базова оренда: 2 діб → 1600 грн
+  ---
+  duration_ms: 0.212786
+  type: 'test'
+  ...
+# Subtest: Базова оренда: 6 діб → 4800 грн
+ok 10 - Базова оренда: 6 діб → 4800 грн
+  ---
+  duration_ms: 0.502846
+  type: 'test'
+  ...
+# Subtest: Знижка 10%: 7 діб → 5040 грн
+ok 11 - Знижка 10%: 7 діб → 5040 грн
+  ---
+  duration_ms: 0.132156
+  type: 'test'
+  ...
+# Subtest: Знижка 10%: 8 діб → 5760 грн
+ok 12 - Знижка 10%: 8 діб → 5760 грн
+  ---
+  duration_ms: 0.053869
+  type: 'test'
+  ...
+# Subtest: Знижка 10%: 29 діб → 20880 грн
+ok 13 - Знижка 10%: 29 діб → 20880 грн
+  ---
+  duration_ms: 0.04059
+  type: 'test'
+  ...
+# Subtest: Знижка 25%: 29 діб → 20880 грн
+ok 14 - Знижка 25%: 29 діб → 20880 грн
+  ---
+  duration_ms: 0.88248
+  type: 'test'
+  ...
+# Subtest: Знижка 25%: 30 діб → 18000 грн
+ok 15 - Знижка 25%: 30 діб → 18000 грн
+  ---
+  duration_ms: 0.050295
+  type: 'test'
+  ...
+# Subtest: Знижка 25%: 31 діб → 18600 грн
+ok 16 - Знижка 25%: 31 діб → 18600 грн
+  ---
+  duration_ms: 0.057986
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 136.927397
