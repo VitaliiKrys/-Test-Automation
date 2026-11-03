@@ -30,3 +30,31 @@ const REFUNDABLE_DEPOSIT = 2000;
 export function calculateUpfrontPayment(days: number): number {
   return calculateRentalCharge(days) + REFUNDABLE_DEPOSIT;
 }
+
+export interface RentalOptions { returned?: boolean; }
+export interface RentalSummary {
+  days: number;
+  baseCharge: number;
+  discountRate: number;
+  rentalCharge: number;
+  deposit: number;
+  upfrontPayment: number;
+  refundedDeposit: number;
+  paymentAfterRefund: number;
+}
+
+export function calculateRentalSummary(days: number, options: RentalOptions = {}): RentalSummary {
+  const rentalCharge = calculateRentalCharge(days);
+  const upfrontPayment = calculateUpfrontPayment(days);
+  const refundedDeposit = options.returned ? REFUNDABLE_DEPOSIT : 0;
+  return {
+    days,
+    baseCharge: days * DAILY_RATE,
+    discountRate: getDiscountRate(days),
+    rentalCharge,
+    deposit: REFUNDABLE_DEPOSIT,
+    upfrontPayment,
+    refundedDeposit,
+    paymentAfterRefund: upfrontPayment - refundedDeposit,
+  };
+}
