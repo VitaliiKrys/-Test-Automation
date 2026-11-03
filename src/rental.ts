@@ -43,10 +43,14 @@ export interface RentalSummary {
   paymentAfterRefund: number;
 }
 
+function getRefundedDeposit(returned: boolean | undefined): number {
+  return returned ? REFUNDABLE_DEPOSIT : 0;
+}
+
 export function calculateRentalSummary(days: number, options: RentalOptions = {}): RentalSummary {
   const rentalCharge = calculateRentalCharge(days);
-  const upfrontPayment = calculateUpfrontPayment(days);
-  const refundedDeposit = options.returned ? REFUNDABLE_DEPOSIT : 0;
+  const refundedDeposit = getRefundedDeposit(options.returned);
+  const upfrontPayment = rentalCharge + REFUNDABLE_DEPOSIT;
   return {
     days,
     baseCharge: days * DAILY_RATE,
