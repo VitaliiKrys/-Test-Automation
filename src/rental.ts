@@ -3,5 +3,6 @@ function rejectInvalidDays(): never {
 }
 
 export function calculateRentalCharge(days: number): number {
-  return rejectInvalidDays();
+  if (!Number.isInteger(days) || days <= 0) rejectInvalidDays();
+  return days * 800;
 }
