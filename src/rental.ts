@@ -24,3 +24,7 @@ export function calculateRentalCharge(days: number): number {
   const base = days * DAILY_RATE;
   return base * (1 - getDiscountRate(days));
 }
+
+export function calculateUpfrontPayment(days: number): number {
+  return calculateRentalCharge(days) + 2000;
+}
