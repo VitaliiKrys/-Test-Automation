@@ -8,8 +8,12 @@ function assertValidDays(days: number): void {
   if (!Number.isInteger(days) || days <= 0) rejectInvalidDays();
 }
 
+function getDiscountRate(days: number): number {
+  return days >= 7 ? 0.10 : 0;
+}
+
 export function calculateRentalCharge(days: number): number {
   assertValidDays(days);
   const base = days * DAILY_RATE;
-  return days >= 7 ? base * 0.9 : base;
+  return base * (1 - getDiscountRate(days));
 }
