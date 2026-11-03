@@ -10,5 +10,6 @@ function assertValidDays(days: number): void {
 
 export function calculateRentalCharge(days: number): number {
   assertValidDays(days);
-  return days * DAILY_RATE;
+  const base = days * DAILY_RATE;
+  return days >= 7 ? base * 0.9 : base;
 }
