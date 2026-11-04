@@ -1,0 +1,30 @@
+{
+  "name": "lab5-variant9-rest-api",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "postman": "newman run postman/orders.postman_collection.json --reporters cli,junit --reporter-junit-export results/newman.xml",
+    "verify:routes": "node scripts/offline-verify.cjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "@types/supertest": "^6.0.2",
+    "@vitest/coverage-v8": "^2.1.9",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "newman": "^6.2.1",
+    "supertest": "^7.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9"
+  }
+}
