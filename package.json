@@ -1,0 +1,5 @@
+{
+  "name":"lab4-variant9-mocks-msw","version":"1.0.0","private":true,"type":"module",
+  "scripts":{"test":"vitest run","test:watch":"vitest","coverage":"vitest run --coverage","typecheck":"tsc --noEmit"},
+  "devDependencies":{"@types/node":"^22.0.0","@vitest/coverage-v8":"^2.1.9","msw":"^2.7.0","typescript":"^5.6.3","vitest":"^2.1.9"}
+}
