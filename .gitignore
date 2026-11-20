@@ -1,0 +1,7 @@
+node_modules/
+playwright-report/
+test-results/
+results/experiment-results.json
+results/experiment-results.csv
+.env
+*.log
